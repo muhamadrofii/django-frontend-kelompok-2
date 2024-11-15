@@ -1,0 +1,16 @@
+<!-- custom_login.html -->
+<form method="post">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username">
+    
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password">
+    
+    <button type="submit">Login</button>
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</form>

@@ -1,0 +1,265 @@
+body {
+    font-family: "Quicksand", sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .container-fluid{
+    padding: 1.4rem 7%;
+    background-color: #ffffff;
+    /* =border-bottom: 2px solid #F2DD72; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: background-color 0.5s ease;
+}
+
+.container-fluid.scrolled {
+  background-color: #ffffff;
+  border-bottom: 3px solid #F2DD72
+}
+
+.nav-item .nav-link:hover {
+    color: black;
+}
+
+.navbar .container-fluid img{
+    width: 20%;
+    position: absolute;
+    left: 30px;
+    margin: 5px 0 0 0;
+    transform: translateY(-50%);
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 80px auto 30px auto;
+    overflow: hidden;
+}
+
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    position: relative;
+}
+
+.carousel-indicators .active {
+  background-color: grey;
+}
+
+#heading-card-hero {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#heading-card-hero span{
+  color: #ff0048;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card-hero {
+    width: 12rem;
+    height: 10rem;
+    border-radius: 10%;
+    padding: 10px 20px;
+    background-color: #fdd835;
+    margin: 10px;
+}
+
+.card-hero-item {
+    margin: auto;
+}
+
+.hero-section {
+    margin-top: 6rem;
+}
+  
+.container-learning {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-learning h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.container-learning .class-card {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Untuk Firefox */
+    -ms-overflow-style: none;  /* Untuk Internet Explorer dan Edge */
+}
+
+.container-learning .class-card ::-webkit-scrollbar {
+    display: none; /* Untuk Chrome */
+}
+
+
+.container-learning .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.container-learning .card img {
+    width: 10rem;
+    margin-bottom: 15px;
+}
+
+.container-learning .card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+    width: 80%;
+    min-height: 48px;
+}
+
+.container-learning .card p {
+    color: #666;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 0.9em;
+    text-align: left;
+    width: 80%;
+}
+
+.container-learning .card p i {
+    margin-right: 5px;
+    color: #666666;
+}
+
+.container-learning .card a {
+    margin-top: 15px;
+}
+
+.bg-yellow-gradient {
+    /* background-image: linear-gradient(to bottom, #ffcc00, #f6e5a1); */
+    background-image: linear-gradient(to bottom, #fbcf1f, #efd673);
+    color: black;
+}
+.text-line-through {
+    text-decoration: line-through;
+}
+.alert-red {
+    color: red;
+}
+.card-subscribe {
+    /* padding: 10px; Reduce padding for smaller size */
+    max-width: 18rem; /* Limit the card width */
+    margin: auto;
+}
+
+.bg-purple {
+    background-color: #0A939E;
+}
+
+.text-center-none {
+    text-align: initial; /* Mengembalikan ke pengaturan default */
+  }
+  
+  
+.card-footer-subscribe {
+    padding: 10px; /* Reduce footer-subscribe padding */
+}
+.title-subscribe {
+    font-size: 1.2rem; /* Smaller heading */
+
+}
+.h2-subscribe {
+    font-size: 1.5rem; /* Smaller price text */
+}
+.item-subscribe {
+    font-size: 0.9rem; /* Smaller list text */
+}
+.btn-subscribe {
+    background-color: #f3d354;
+    font-weight: 650;
+}
+
+.btn-subscribe:hover {
+  background-color: #0A939E;
+  color:#fff
+  /* font-weight: 650; */
+}
+
+.footer {
+    background-color: #333333a2;
+    color: white;
+    padding: 20px 10px;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .footer-column {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+  }
+  .footer-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+  .footer-column h3 {
+    margin-bottom: 15px;
+    color: white;
+  }
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  .footer-column ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  .footer-bottom {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+  }
+  .social-icons {
+    margin-top: 20px;
+  }
+  .social-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  .social-icons a:hover {
+    color: #f39c12;
+  }
+  .social-icons a svg {
+    margin-right: 8px;
+  }

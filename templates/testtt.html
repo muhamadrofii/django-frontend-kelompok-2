@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Home - My Django Website{% endblock %}
+
+
+{% block content %}
+    <div class="jumbotron text-center">
+        <h2>Welcome to My Django Website!</h2>
+        <p>This is the home page, with a Bootstrap-styled button.</p>
+        
+        <!-- Tombol Bootstrap -->
+        
+        <a href="{% url 'account_login' %}">login</a>
+        <a href="{% url 'account_register' %}">register</a>
+        
+    </div>
+{% endblock %}
+
+<a href="{% url 'testlogin' %}">login ke 2</a>
+
+
+
+
+<link rel="stylesheet" href="style/landingPage.css">
+<link rel="stylesheet" href="style/teacher.css">
+<!-- <link rel="stylesheet" href="{% static 'style/landingPage.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'style/teacher.css' %}"> -->
+
+
+<a class="navbar-brand" href="#"><img src="assets/img/logo_smartbeez.png" class="img-fluid" alt=""></a>
+<!-- <img src="{% static 'assets/img/logo_smartbeez.png' %}" alt="" class="img-fluid"> -->
+
+
+
+<script src="script/pesan.js"></script>
+<script src="script/landing_page.js"></script>
+<!-- <script src="{% static 'script/pesan.js' %}"></script> -->
+<!-- <script src="{% static 'script/landing_page.js' %}"></script> -->
+
+<a class="btn btn-login rounded-5" href="loginForm.html">Login</a>
+<!-- <a class="btn btn-login rounded-5" href="{% url 'login' %}">Login</a> -->

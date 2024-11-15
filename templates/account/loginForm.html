@@ -1,0 +1,95 @@
+{% extends "../base.html" %}
+{% load static %}
+<!-- {% load static %} -->
+
+{% block title %}Signin{% endblock %}
+
+{% block head %}
+<!-- Tempat untuk memasukkan stylesheet atau JS yang spesifik halaman -->
+<link rel="stylesheet" href='{% static "/css/loginRegister.css" %}'>
+{% endblock %}
+
+{% block content %}
+<div class="container bg-light">
+    <div class="row justify-content-center">
+        <div class="back-button pt-2">
+            <a href="{% url 'index' %}"class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-6">
+              <div class="d-flex justify-content-end align-items-center image-section mt-3 mb-5 ms-auto">
+                <img src="{% static '/images/login_beelg.png' %}" class="img-fluid object-fit-cover d-none d-lg-block" alt="Your Image">
+              </div>
+              
+              
+        </div>
+        <div class="col-md-6 col-lg-6">
+            <div class="login-container">
+                <h3 class="text-center mb-4">Login</h3>
+                <form id="formlogin" method="post">
+                  {% csrf_token %}
+                  {% if messages %}
+                  <div class="alert alert-danger" role="alert">
+                      {% for message in messages %}
+                          <p>{{ message }}</p>
+                      {% endfor %}
+                  </div>
+              {% endif %}
+              
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                    </div>
+                    
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember Me</label>
+                    </div>
+                    <div class="forgot-password text-end">
+                        <a href="#" class="text-decoration-none">Forgot Password?</a>
+                    </div>
+                    <!-- <div class="forgot-password">
+                        <a href="#">Forgot Password?</a>
+                      </div> -->
+                      <div id="error-message" style="color: red;"></div><br>
+                    <div class="d-grid mt-3">
+                        <button type="submit" class="btn btn-login" style="color: #ffffff; text-decoration: none;">Login</button>
+                    </div>
+                </form>
+                <div class="divider text-center mt-3">Or Continue With</div>
+
+                <div class="social-login mt-3 text-center">
+                    <a href="#" class="btn btn-outline-primary mx-2">
+                        <i class="fab fa-facebook-f" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-info mx-2">
+                        <i class="fab fa-twitter" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-danger mx-2">
+                        <i class="fab fa-google" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary mx-2">
+                        <i class="fab fa-linkedin-in" style="font-size: 20px;"></i>
+                    </a>
+                </div>
+        
+                <div class="signup-link text-center">
+                  Don't have an account? <a href="{% url 'account_register' %}" class="text-decoration-none">Sign Up here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="login-notification" class="alert alert-success" style="display: none;"></div>
+<div id="cekemail-notification" class="alert alert-danger" style="display: none;"></div>
+
+
+{% endblock %}
+

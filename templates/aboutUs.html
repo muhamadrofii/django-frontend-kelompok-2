@@ -1,0 +1,298 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABOUT US</title>
+
+
+    <!-- Fonts Google-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet"> -->
+
+    <!-- Feather Icons -->
+    <!-- <script src="https://unpkg.com/feather-icons"></script> -->
+
+    <!-- Style CSS -->
+    <!-- <link rel="stylesheet" href="style/aboutUs.css" /> -->
+    <link rel="stylesheet" href="{% static 'css/aboutUs.css'%}" />
+    <script src="https://kit.fontawesome.com/a59b9b09ab.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <!--boostrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg py-1">
+      <div class="container-fluid px-5">
+        <!-- <a class="navbar-brand" href="#"><img src="assets/img/logo_smartbeez.png" class="img-fluid" alt=""></a> -->
+        <a class="navbar-brand" href="#"><img src="{% static 'images/logo_smartbeez.png' %}" class="img-fluid" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder gap-4">
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="index.html"> -->
+                <a class="nav-link" href="{% url 'index' %}">
+                <i class="fa-solid fa-chevron-right fa-lg"></i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Kenapa harus memilih kami?</h3>
+            <p>
+              SmartBeez adalah solusi utama bagi orang tua yang ingin memastikan tumbuh kembang optimal bagi anak usia 5-9 tahun. Platform ini dirancang khusus untuk mendukung perkembangan anak Anda secara menyeluruh, mulai dari aspek
+              emosional hingga intelektual, sambil memberikan panduan parenting yang relevan dan up-to-date bagi orang tua. Kami menyediakan berbagai sumber daya berkualitas, aktivitas menarik, serta informasi edukatif yang praktis untuk
+              membantu anak-anak mencapai potensi terbaiknya.
+            </p>
+            <p>
+              Dengan fokus pada pendidikan holistik, SmartBeez hadir untuk mendampingi Anda dalam menghadapi tantangan parenting di era digital. Mulai dari tips efektif hingga strategi praktis, kami berkomitmen untuk mendukung peran Anda
+              sebagai orang tua yang bijak dan proaktif.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img src="assets/img/cartun ilustrasi.png" alt="foto cantik" />
+            <!-- <img src = "{% static 'img/cartun ilustrasi.png' %}" alt="foto cantik" /> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- visi dan misi -->
+    <section id="visi" class="visi">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="assets/img/reading book.png" alt="foto jelek" />
+            <!-- <img src = "{% static 'img/reading book.png' %}" alt="foto jelek" /> -->
+          </div>
+          <div class="col-md-6">
+            <h3 style="text-align: start">____________VISI ___________</h3>
+            <p style="text-align: start">
+              Menjadi platform pendidikan interaktif yang menyenangkan dan inovatif, membantu anak-anak usia 5 hingga 9 tahun mengembangkan keterampilan dasar, kreativitas, dan rasa ingin tahu mereka melalui pengalaman belajar yang aman,
+              menyenangkan, dan mendalam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="misi" class="misi text-center">
+      <div class="container-fluid">
+        <div class="row dalem">
+          <h3>MISI</h3>
+          <div class="col-md-4">
+            <p>1. Menyediakan materi pendidikan yang sesuai usia dan menarik, mendukung perkembangan kognitif, emosional, dan sosial anak-anak.</p>
+          </div>
+          <div class="col-md-4">
+            <p>2. Menciptakan pengalaman belajar yang interaktif dan menyenangkan, mendorong anak-anak untuk aktif belajar dan berpartisipasi.</p>
+          </div>
+          <div class="col-md-4">
+            <p>3. Menggunakan teknologi edukatif yang aman dan ramah anak untuk memperkaya proses pembelajaran.</p>
+          </div>
+          <div class="row dalem">
+            <div class="col-md-4">
+              <p>4. Melibatkan orang tua dan guru sebagai mitra aktif dalam pendidikan anak, menyediakan alat bantu yang mendukung perkembangan anak di rumah dan di sekolah.</p>
+            </div>
+            <div class="col-md-4">
+              <p>5. Menginspirasi anak-anak untuk mencintai belajar, mengeksplorasi kreativitas, dan menumbuhkan rasa ingin tahu mereka terhadap dunia di sekitar mereka.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir dari visi dan misi -->
+
+    <!-- meet our teams -->
+    <section id="teams" class="teams">
+      <div class="cover">
+        <h1 class="text-center">Our Teams</h1>
+        <div class="scroll-images">
+          <div class="child">
+            <img src="" alt="" width="80px" />
+            <!-- <img src = "{% static 'img/foto_Rianda.png' %}" alt="" width="80px" />-->
+            <h5>Rianda Saputra</h5>
+            <p>Team DEVELOPER</p>
+          </div>
+          <div class="child">
+            <img src="" alt="foto rofi" width="80px" />
+            <!-- <img src = "{% static 'img/foto_Rofi.png' %}" alt="foto rofi" width="80px" /> -->
+            <h5>Muhammad Rofi'i</h5>
+            <p>Team DEVELOPER</p>
+          </div>
+          <div class="child">
+            <img src="" alt="foto nida" width="80px" />
+            <!-- <img src = "{% static 'img/foto_Nida.png' %}" alt="foto nida" width="80px" /> -->
+            <h5>Syafiqotun Nidaa</h5>
+            <p>Team DEVELOPER</p>
+          </div>
+          <div class="child">
+            <img src="" alt="foto suna" width="80px" />
+            <!-- <img src = "{% static 'img/foto_Suna.png' %}" alt="foto suna" width="80px" /> -->
+            <h5>Putri Suna</h5>
+            <p>Team DEVELOPER</p>
+          </div>
+          <div class="child">
+            <img src="" alt="foto salsa" width="80px" />
+            <!-- <img src = "{% static 'img/foto_Salsa.png' %}" alt="foto salsa" width="80px" /> -->
+            <h5>Nur Salsabila</h5>
+            <p>Team DEVELOPER</p>
+          </div>
+          <div class="child">
+            <img src="" alt="foto sabella" width="80px" />
+            <!-- <img src = "{% static 'img/foto_Sabella.png' %}" alt="foto sabella" width="80px" /> -->
+            <h5>Sabella Yasmin</h5>
+            <p>Team DEVELOPER</p>
+          </div>
+          <div class="child">
+            <img src="" alt="foto maura" width="80px" />
+            <!-- <img src = "{% static 'img/foto_Maura.png' %}" alt="foto maura" width="80px" /> -->
+            <h5>Maura Aqlaila</h5>
+            <p>Team DEVELOPER</p>
+          </div>
+          <div class="child">
+            <img src="" alt="foto amanda" width="80px" />
+            <!-- <img src = "{% static 'img/foto_Amanda.png' %}" alt="foto amanda" width="80px" /> -->
+            <h5>Amanda Septiyaning</h5>
+            <p>Team DEVELOPER</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir meet our teams -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-column">
+              <img src="assets/img/logo_smartbeez.png" alt="Company Logo" class="footer-logo">
+              <!-- <img src="{% static 'img/logo_smartbeez.png' %}"-->
+          </div>
+  
+          <div class="footer-column">
+              <h3>Tentang Kami</h3>
+              <ul>
+                  <li><a href="aboutUs.html">Profil Perusahaan</a></li>
+
+                  <li><a href="features">Keunggulan</a></li>
+
+                  <li><a href="#faqs">FAQ</a></li>
+
+                  <li><a href="#faqs">FAQ</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Produk & Layanan</h3>
+              <ul>
+                  <!-- <li><a href="loginForm.html">Parenting Dasar</a></li> -->
+                  <li><a href="{% url 'account_signin'%}">Parenting Dasar</a></li>
+                  <!-- <li><a href="loginForm.html">Belajar Online</a></li> -->
+                  <li><a href="{% url 'account_signin'%}">Belajar Online</a></li>
+                  <!-- <li><a href="loginForm.html">Perkembangan Anak</a></li> -->
+                  <li><a href="{% url 'account_signin'%}">Perkembangan Anak</a></li>
+                  <!-- <li><a href="loginForm.html">Nutrisi dan Kesehatan Anak</a></li> -->
+                  <li><a href="{% url 'account_signin'%}">Nutrisi dan Kesehatan Anak</a></li>
+                  <!-- <li><a href="loginForm.html">Pola Asuh Positif</a></li> -->
+                  <li><a href="{% url 'account_signin'%}">Pola Asuh Positif</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Kantor Kami</h3>
+              <p>Jl. Mandiri, Blok D, No. 64 </p>
+              <p>Tangerang, Indonesia</p>
+              <ul>
+                <li><a href="#"><i data-feather="phone"></i> (+62) 812-1234-5678</a></li>
+                <li><a href="#"><i data-feather="mail"></i> smartbeez@gmail.com</a></li>
+            </ul>          
+          </div>
+      </div>
+  
+      <div class="footer-bottom">
+          <div class="social-icons">
+              <a href="#">
+                  <i data-feather="facebook"></i>Facebook
+              </a>
+              <a href="#">
+                  <i data-feather="twitter"></i>Twitter
+              </a>
+              <a href="#">
+                  <i data-feather="instagram"></i>Instagram
+              </a>
+          </div>
+          <div class="credit">
+            <p class="text-decoration-none p-3"> Created by  <span class="text-warning"> <strong>kelompok 2</strong></span> | &copy; 2024.</p>
+          </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>feather.replace();</script>
+    <script>
+    const scrollContainer = document.querySelector('.scroll-images');
+    const cards = document.querySelectorAll('.child'); // Get all the cards
+    const cardWidth = cards[0].offsetWidth + 16; // Card width + margin (adjust margin as needed)
+    const totalCards = cards.length;
+    const containerVisibleWidth = scrollContainer.clientWidth; // Visible width of the container
+    
+    // Calculate how many cards are visible in one full scroll view
+    const visibleCards = Math.floor(containerVisibleWidth / cardWidth);
+    let currentIndex = 0; // To track the current card
+    
+    // Function to scroll one card at a time
+    function autoScroll() {
+      // Scroll by the width of one card
+      currentIndex++;
+      
+      // If we've scrolled past the last card, reset to the start
+      if (currentIndex >= totalCards - visibleCards) {
+        // Delay the reset for smoother effect
+        setTimeout(() => {
+          scrollContainer.style.scrollBehavior = 'auto'; // Disable smooth scroll for instant reset
+          scrollContainer.scrollLeft = 0; // Reset scroll position
+          scrollContainer.style.scrollBehavior = 'smooth'; // Re-enable smooth scrolling
+          currentIndex = 0; // Reset the index
+        }, 500); // Adjust this delay for a smoother reset transition
+      } else {
+        // Scroll by one card's width
+        scrollContainer.scrollBy({
+          left: cardWidth,
+          behavior: 'smooth'
+        });
+      }
+    }
+    
+    // Start auto-scrolling every 3 seconds (adjust as needed)
+    let scrollInterval = setInterval(autoScroll, 3000);
+    
+    // Stop scrolling on mouse hover
+    scrollContainer.addEventListener('mouseover', () => {
+      clearInterval(scrollInterval);
+    });
+    
+    // Resume scrolling when mouse leaves
+    scrollContainer.addEventListener('mouseout', () => {
+      scrollInterval = setInterval(autoScroll, 3000);
+    });
+    
+    
+        </script>
+  </body>
+  </html>

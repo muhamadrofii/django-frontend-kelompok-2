@@ -1,0 +1,352 @@
+{% extends "../base.html" %}
+{% load static %}
+<!-- {% load static %} -->
+
+{% block title %}Beranda{% endblock %}
+
+{% block head %}
+<!-- Tempat untuk memasukkan stylesheet atau JS yang spesifik halaman -->
+<link rel="stylesheet" href="{% static 'css/beranda.css'%}">
+{% endblock %}
+
+{% block content %}
+  <!-- Navbar Section-->
+  <nav class="navbar navbar-expand-lg py-1">
+    <div class="container-fluid px-5">
+      <!-- <a class="navbar-brand" href="#"><img src="assets/img/logo_smartbeez.png" class="img-fluid" alt=""></a> -->
+      <a class="navbar-brand" href="#"><img src="{% static 'images/logo_smartbeez.png' %}" class="img-fluid" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder gap-4">
+          <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="{% static 'profil.html' %}">Profil</a></li>-->
+          <!-- <li class="nav-item"><a class="nav-link" href="index.html">Keluar</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Keluar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel Hero Section -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" style="background-color: black;" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" style="background-color: black;" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" style="background-color: black;" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- <img src="assets/img/berandaIklan1.png" class="d-block w-100" alt="..."> -->
+        <img src="{% static 'images/berandaIklan1.png' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <!-- <img src="assets/images/berandaIklan2.png" class="d-block w-100" alt="..."> -->
+        <img src="{% static 'images/berandaIklan2.png' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <!-- <img src="assets/img/berandaIklan3.png" class="d-block w-100" alt="..."> -->
+        <img src="{% static 'images/berandaIklan3.png' %}" class="d-block w-100" alt="...">
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon visually-hidden" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Card Hero Section -->
+  <h1 id="heading-card-hero">Ciptakan Masa Depan Cerah Bersama <span>SmartBeez!</span></h1>
+  <div class="card-container" id="card-hero-container">
+      <div class="card-hero">
+        <div class="card-hero-item">
+          <div class="card-body-hero">
+            <p class="card-text">Lebih dari 1 Juta+ Anak dan Orang Tua Belajar dan Tumbuh Bersama.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-hero">
+        <div class="card-hero-item">
+          <div class="card-body-hero">
+            <p class="card-text">Ribuan Orang Tua Berperan Aktif Mendampingi Anak dalam Pembelajaran.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-hero">
+        <div class="card-hero-item">
+          <div class="card-body-hero">
+            <p class="card-text">Pembelajaran Interaktif yang Mendorong Anak Mengasah Keterampilan.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-hero">
+        <div class="card-hero-item">
+          <div class="card-body-hero">
+            <p class="card-text">4.9 Rating di Berbagai Platform Edukasi.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-hero">
+        <div class="card-hero-item">
+          <div class="card-body-hero">
+            <p class="card-text">50k++ Pengguna Baru Bergabung Setiap Bulan.</p>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <div class="container-learning">
+    <h1>Learning Class</h1>
+    <div class="class-card">
+        <div class="card">
+            <!-- <img src="assets/img/learning_class_1.png" alt="Gambar Parenting Dasar"> -->
+            <img src="{% static 'images/learning_class_1.png' %}" alt="Gambar Parenting Dasar">
+            <h3>Parenting Dasar</h3>
+            <p><i data-feather="users"></i> 52,020 peserta</p>
+            <p><i data-feather="book"></i> 12 Topik • 153 Materi</p>
+            <p><i data-feather="star"></i> 4.58/5</p>
+            <a href="videoLearning.html" class="btn btn-primary">Lihat Materi</a>
+            <!-- <a href="{% static 'videoLearning.html' %}" class="btn btn-primary">Lihat Materi</a>-->
+        </div>
+        <div class="card">
+            <!-- <img src="assets/img/learning_class_2.png" alt="Gambar Perkembangan Anak"> -->
+            <img src="{% static 'images/learning_class_2.png' %}" alt="Gambar Perkembangan Anak">
+            <h3>Perkembangan Anak</h3>
+            <p><i data-feather="users"></i> 52,020 peserta</p>
+            <p><i data-feather="book"></i> 12 Topik • 153 Materi</p>
+            <p><i data-feather="star"></i> 4.58/5</p>
+            <a href="videoLearning.html" class="btn btn-primary">Lihat Materi</a>
+            <!-- <a href="{% static 'videoLearning.html' %}" class="btn btn-primary">Lihat Materi</a>-->
+        </div>
+        <div class="card">
+            <!-- <img src="assets/img/learning_class_3.png" alt="Gambar Nutrisi dan Kesehatan Anak"> -->
+            <img src="{% static 'images/learning_class_3.png' %}" alt="Gambar Nutrisi dan Kesehatan Anak">
+            <h3>Nutrisi dan<br>Kesehatan Anak</h3>
+            <p><i data-feather="users"></i> 52,020 peserta</p>
+            <p><i data-feather="book"></i> 12 Topik • 153 Materi</p>
+            <p><i data-feather="star"></i> 4.58/5</p>
+            <a href="videoLearning.html" class="btn btn-primary">Lihat Materi</a>
+            <!-- <a href="{% static 'videoLearning.html' %}" class="btn btn-primary">Lihat Materi</a>-->
+        </div>
+        <div class="card">
+            <!-- <img src="assets/img/learning_class_4.png" alt="Gambar Pengasuhan Positif dan Disiplin"> -->
+            <img src="{% static 'images/learning_class_4.png' %}" alt="Gambar Pengasuhan Positif dan Disiplin">
+            <h3>Pengasuhan Positif<br>dan Disiplin</h3>
+            <p><i data-feather="users"></i> 52,020 peserta</p>
+            <p><i data-feather="book"></i> 12 Topik • 153 Materi</p>
+            <p><i data-feather="star"></i> 4.58/5</p>
+            <a href="videoLearning.html" class="btn btn-primary">Lihat Materi</a>
+            <!-- <a href="{% static 'videoLearning.html' %}" class="btn btn-primary">Lihat Materi</a>-->
+        </div>
+        <div class="card">
+            <!-- <img src="assets/img/learning_class_5.png" alt="Gambar Teknologi dan Media untuk Anak"> -->
+            <img src="{% static 'images/learning_class_5.png' %}" alt="Gambar Teknologi dan Media untuk Anak">
+            <h3>Teknologi dan Media<br>untuk Anak</h3>
+            <p><i data-feather="users"></i> 52,020 peserta</p>
+            <p><i data-feather="book"></i> 12 Topik • 153 Materi</p>
+            <p><i data-feather="star"></i> 4.58/5</p>
+            <a href="videoLearning.html" class="btn btn-primary">Lihat Materi</a>
+            <!-- <a href="{% static 'videoLearning.html' %}" class="btn btn-primary">Lihat Materi</a>-->
+        </div>
+        <div class="card">
+            <!-- <img src="assets/img/learning_class_6.png" alt="Gambar Pendidikan Emosional dan Sosial"> -->
+            <img src="{% static 'images/learning_class_6.png' %}" alt="Gambar Pendidikan Emosional dan Sosial">
+            <h3>Pendidikan Sosial<br>dan Emosional</h3>
+            <p><i data-feather="users"></i> 52,020 peserta</p>
+            <p><i data-feather="book"></i> 12 Topik • 153 Materi</p>
+            <p><i data-feather="star"></i> 4.58/5</p>
+            <a href="videoLearning.html" class="btn btn-primary">Lihat Materi</a>
+            <!-- <a href="{% static 'videoLearning.html' %}" class="btn btn-primary">Lihat Materi</a>-->
+        </div>
+        <div class="card">
+            <!-- <img src="assets/img/learning_class_7.png" alt="Gambar Pendidikan Karakter"> -->
+            <img src="{% static 'images/learning_class_7.png' %}" alt="Gambar Pendidikan Karakter">
+            <h3>Pendidikan Karakter</h3>
+            <p><i data-feather="users"></i> 52,020 peserta</p>
+            <p><i data-feather="book"></i> 12 Topik • 153 Materi</p>
+            <p><i data-feather="star"></i> 4.58/5</p>
+            <a href="videoLearning.html" class="btn btn-primary">Lihat Materi</a>
+            <!-- <a href="{% static 'videoLearning.html' %}" class="btn btn-primary">Lihat Materi</a>-->
+        </div>
+        <div class="card">
+            <!-- <img src="assets/img/learning_class_8.png" alt="Gambar Komunikasi Efektif dengan Anak"> -->
+            <img src="{% static 'images/learning_class_8.png' %}" alt="Gambar Komunikasi Efektif dengan Anak">
+            <h3>Komunikasi Efektif<br>dengan Anak</h3>
+            <p><i data-feather="users"></i> 52,020 peserta</p>
+            <p><i data-feather="book"></i> 12 Topik • 153 Materi</p>
+            <p><i data-feather="star"></i> 4.58/5</p>
+            <a href="videoLearning.html" class="btn btn-primary">Lihat Materi</a>
+            <!-- <a href="{% static 'videoLearning.html' %}" class="btn btn-primary">Lihat Materi</a>-->
+        </div>
+        <div class="card">
+            <!-- <img src="assets/images/learning_class_9.png" alt="Gambar Persiapan Masuk Sekolah"> -->
+            <img src="{% static 'images/learning_class_9.png' %}" alt="Gambar Persiapan Masuk Sekolah">
+            <h3>Persiapan Masuk<br>Sekolah</h3>
+            <p><i data-feather="users"></i> 52,020 peserta</p>
+            <p><i data-feather="book"></i> 12 Topik • 153 Materi</p>
+            <p><i data-feather="star"></i> 4.58/5</p>
+            <a href="videoLearning.html" class="btn btn-primary">Lihat Materi</a>
+            <!-- <a href="{% static 'videoLearning.html' %}" class="btn btn-primary">Lihat Materi</a>-->
+        </div>
+        <div class="card">
+            <!-- <img src="assets/img/learning_class_10.png" alt="Gambar Kreativitas dan Bermain"> -->
+            <img src="{% static 'images/learning_class_10.png' %}" alt="Gambar Kreativitas dan Bermain">
+            <h3>Kreativitas dan<br>Bermain</h3>
+            <p><i data-feather="users"></i> 52,020 peserta</p>
+            <p><i data-feather="book"></i> 12 Topik • 153 Materi</p>
+            <p><i data-feather="star"></i> 4.58/5</p>
+            <a href="videoLearning.html" class="btn btn-primary">Lihat Materi</a>
+            <!-- <a href="{% static 'videoLearning.html' %}" class="btn btn-primary">Lihat Materi</a>-->
+        </div>
+    </div>
+</div>
+
+  <!-- Plan Section -->
+  <div class="container-subscribe py-5 my-5">
+    <div class="row justify-content-center">
+      <!-- 12 Month Plan -->
+      <div class="col-md-4 mb-4">
+        <div class="card-subscribe p-2 bg-yellow-gradient rounded-5 mt-3" style="border: 4px solid #0A939E">
+          <div class="card-content text-dark fw-bold text-center-none ps-3">
+            <h4 class="card-subscribe title-subscribe fw-bold py-4">12 Bulan</h4>
+            <p class="mb-0">PAKET VIDEO E-LEARNING</p>
+            <p class="text-line-through">Rp 4.200.000</p>
+            <h2 class="h2-subscribe">Rp 179.000</h2>
+            <p>Untuk akses semua, setara Rp 14.916 / bulan.</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item item-subscribe">1400+ Materi Video</li>
+            <li class="list-group-item item-subscribe">1400+ Modul Praktik Portfolio</li>
+            <li class="list-group-item item-subscribe">Sertifikat di Tiap Materi</li>
+          </ul>
+          <div class="card-footer-subscribe">
+            <a href="#" class="btn-subscribe btn rounded-5 py-2 px-3 btn-sm">Mulai Berlangganan</a>
+            <p class="alert-red">Segera Habis 🔥</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 Month Plan (Terpopuler) -->
+      <div class="col-md-4 mb-4">
+        <div class="card-subscribe bg-yellow-gradient rounded-5 pt-3 text-center fw-bold text-dark">TERPOPULER
+          <div class="card-subscribe p-2 bg-purple rounded-5 mt-3" style="border: 4px solid #ffcc00;">
+            <div class="card-content text-white text-center-none ps-3">
+              <h4 class="card-subscribe title-subscribe py-4">6 Bulan</h4>
+              <p class="mb-0">PAKET VIDEO E-LEARNING</p>
+              <p class="text-line-through">Rp 2.100.000</p>
+              <h2 class="h2-subscribe">Rp 99.000</h2>
+              <p>Untuk akses semua, setara Rp 16.500 / bulan.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item item-subscribe">1400+ Materi Video</li>
+            <li class="list-group-item item-subscribe">1400+ Modul Praktik Portfolio</li>
+            <li class="list-group-item item-subscribe">Sertifikat di Tiap Materi</li>
+          </ul>
+          <div class="card-footer-subscribe">
+            <a href="#" class="btn-subscribe btn rounded-5 py-2 px-3 btn-sm">Mulai Berlangganan</a>
+            <p class="alert-red">Segera Habis 🔥</p>
+          </div>
+        </div>
+      </div>
+    
+      <!-- 1 Month Plan -->
+      <div class="col-md-4 mb-4">
+        <div class="card-subscribe p-2 bg-yellow-gradient rounded-5 mt-3" style="border: 4px solid #0A939E">
+          <div class="card-content text-dark text-center-none fw-bold ps-3">
+            <h4 class="card-subscribe title-subscribe fw-bold py-4">1 Bulan</h4>
+            <p class="mb-0">PAKET VIDEO E-LEARNING</p>
+            <p class="text-line-through">Rp 350.000</p>
+            <h2 class="h2-subscribe">Rp 29.000</h2>
+            <p>Untuk akses semua, setara Rp 7.250 / minggu.</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item item-subscribe">1400+ Materi Video</li>
+            <li class="list-group-item item-subscribe">1400+ Modul Praktik Portfolio</li>
+            <li class="list-group-item item-subscribe">Sertifikat di Tiap Materi</li>
+          </ul>
+          <div class="card-footer-subscribe">
+            <a href="#" class="btn-subscribe btn rounded-5 py-2 px-3 btn-sm">Mulai Berlangganan</a>
+            <p class="alert-red">Segera Habis 🔥</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Start -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <img src="assets/img/logo_smartbeez.png" alt="Company Logo" class="footer-logo">
+        <!-- <img src="{% static 'img/logo_smartbeez.png' %}" alt="Company Logo" class="footer-logo'%}"-->
+      </div>
+      <div class="footer-column">
+        <h3>Tentang Kami</h3>
+        <ul>
+          <li><a href="aboutUs.html">Profil Perusahaan</a></li>
+
+          <li><a href="index.html#features">Keunggulan</a></li>
+
+          <li><a href="index.html#faqs">FAQ</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Produk & Layanan</h3>
+        <ul>
+          <li><a href="parents.html">Parenting Dasar</a></li>
+
+          <li><a href="loginForm.html">Belajar Online</a></li>
+
+          <li><a href="parents.html">Perkembangan Anak</a></li>
+
+          <li><a href="parents.html">Nutrisi dan Kesehatan Anak</a></li>
+
+          <li><a href="parents.html">Pola Asuh Positif</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Kantor Kami</h3>
+          <p>Jl. Mandiri, Blok D, No. 64 </p>
+          <p>Tangerang, Indonesia</p>
+          <ul>
+            <li><a href="#"><i data-feather="phone"></i> (+62) 812-1234-5678</a></li>
+            <li><a href="#"><i data-feather="mail"></i> smartbeez@gmail.com</a></li>
+          </ul>          
+      </div>
+    </div>
+      <div class="footer-bottom">
+        <div class="social-icons">
+          <a href="#">
+            <i data-feather="facebook"></i>Facebook
+          </a>
+          <a href="#">
+            <i data-feather="twitter"></i>Twitter
+          </a>
+          <a href="#">
+            <i data-feather="instagram"></i>Instagram
+          </a>
+        </div>
+        <div class="credit">
+          <p class="text-decoration-none p-3"> Created by  <span class="text-warning"> <strong>kelompok 2</strong></span> | &copy; 2024.</p>
+        </div>
+      </div>
+    </footer>
+{% endblock %}
+  <script scr="{% static 'js/navbar.js' %}"></script>
+{% block javascript%}
+
+{% endblock %}

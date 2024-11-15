@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+}
+.team-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.team-section h2 {
+    color: #00bcd4;
+    font-size: 36px;
+    font-weight: bold;
+}
+.team-section p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+.team-pengajar {
+    margin-bottom: 30px;
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.team-pengajar:hover {
+    transform: scale(1.05);
+}
+.team-pengajar img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.team-pengajar h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+.team-pengajar p {
+    font-size: 14px;
+    color: #666;
+}
+.team-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 20px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.team-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+/* Modal Styles */
+.modal {
+    display: none; /* Default hidden */
+    position: fixed; /* Tetap pada layar */
+    z-index: 1; /* Memastikan modal muncul di atas konten lainnya */
+    left: 0;
+    top: 0;
+    width: 100%; /* Lebar layar penuh */
+    height: 100%; /* Tinggi layar penuh */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi transparan */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Mengatur modal di tengah */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Lebar modal, bisa disesuaikan */
+    height: 80%; /* Tinggi modal, bisa disesuaikan */
+    max-width: 700px; /* Batas maksimal lebar */
+    max-height: 90vh; /* Batas maksimal tinggi modal */
+    overflow: hidden; /* Jika konten di dalam modal terlalu besar */
+    position: relative;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .team-container {
+        display: block;
+    }
+}

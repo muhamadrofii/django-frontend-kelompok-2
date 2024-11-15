@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Class</title>
+
+  <!-- Link CSS -->
+    <link rel="stylesheet" href="{% static 'css/popUp_Pengajar.css' %}">
+
+</head>
+
+<body>
+  <div class="modal">
+    <div class="background-circle">
+    </div>
+    <div class="background-circle-small">
+    </div>
+    <div class="modal-header">
+      <!-- <img alt="Tutor Nining wearing a hijab and smiling" height="150" src="assets/img/pengajar_angel.jpg" width="150" />
+        -->
+            <img alt="Tutor Nining wearing a hijab and smiling" height="150" src="{% static 'images/pengajar_angel.jpg' %}" width="150" />
+      <div>
+        <h2>Tentor Angel</h2>
+        <p>Pengajar Pencerita (Storyteller)</p>
+      </div>
+    </div>
+    <div class="modal-content">
+      <p>
+        "Halo, saya adalah Miss Angel~ Saya adalah seorang pencerita yang mencintai dunia imajinasi dan cerita. Dengan
+        pengalaman lebih dari 5 tahun, saya telah membagikan berbagai cerita menarik kepada anak-anak, membawa mereka
+        berpetualang melalui imajinasi dan kreativitas. Di sini, kita akan menjelajahi dunia cerita melalui dongeng,
+        permainan peran, dan aktivitas seru lainnya. Saya tidak sabar untuk berbagi cerita dan melihat bagaimana si
+        Kecil berimajinasi! Sampai jumpa!"
+      </p>
+    </div>
+  </div>
+</body>
+</html>

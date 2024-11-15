@@ -1,0 +1,70 @@
+* {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #ffcc00;
+}
+
+.container {
+  max-width: 900px;
+  border-radius: 15px;
+}
+
+.image-section {
+  width: 85%;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.login-container {
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.btn-login{
+  background-color: #ffc107;
+}
+
+.btn-register {
+  background-color: #ffc107;
+}
+
+.btn-login:hover{
+  background-color:  #ffcc00;
+}
+
+.btn-register:hover {
+  background-color:  #ffcc00;
+}
+#login-notification {
+  display: none;
+  position: fixed;
+  top: 20px; /* Atur jarak dari atas */
+  left: 50%; /* Posisikan di tengah secara horizontal */
+  transform: translateX(-50%); /* Hanya geser secara horizontal */
+  z-index: 1000;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
+}
+#cekemail-notification {
+  display: none;
+  position: fixed;
+  top: 20px; /* Atur jarak dari atas */
+  left: 50%; /* Posisikan di tengah secara horizontal */
+  transform: translateX(-50%); /* Hanya geser secara horizontal */
+  z-index: 1000;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
+}
